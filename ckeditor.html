@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cara Memasang TextEditor CKEDITOR</title>
+</head>
+<body>
+    <form>
+        <p>Isi Berita:</p>
+        <p>
+            <textarea name="berita" class="texteditor"></textarea>
+        </p>
+        <p><button type="submit">SIMPAN</button></p>
+    </form>
+     
+    <!-- panggil jquery -->
+    <script type="text/javascript" src="../assets/jquery/jquery-3.1.1.min.js"></script>
+    <!-- panggil ckeditor.js -->
+    <script type="text/javascript" src="../assets/ckeditor/ckeditor.js"></script>
+    <!-- panggil adapter jquery ckeditor -->
+    <script type="text/javascript" src="../assets/ckeditor/adapters/jquery.js"></script>
+    <!-- setup selector -->
+    <script type="text/javascript">
+        $('textarea.texteditor').ckeditor();
+    </script>
+</body>
+</html>

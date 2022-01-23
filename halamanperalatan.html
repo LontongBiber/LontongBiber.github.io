@@ -1,0 +1,83 @@
+{% include 'header_user.html' %}
+  
+      <div class="main">
+        <div class="container">
+          <ul class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="javascript:;">Pages</a></li>
+              <li class="active">Services</li>
+          </ul>
+  
+          <!-- BEGIN SIDEBAR & CONTENT -->
+          <div class="row margin-bottom-40">
+            <!-- BEGIN CONTENT -->
+            <div class="col-md-12 col-sm-12">
+              <h1>Peralatan Disabilitas</h1>
+              <div class="content-page">
+                <div class="row">
+                  <!-- BEGIN SERVICE BLOCKS -->               
+                  <div class="col-md-18">
+                    <div class="row margin-bottom-20">
+                      <div class="col-md-18">
+                        <div class="service-box-v1">
+                          <div><i class="fa fa-wheelchair" aria-hidden="true"></i></div>
+                          <h2>Kursi Roda</h2>
+                          <p>Jumlah Kursi Roda</p>
+                          <p>{{ kursi_roda.jumlah }}</p>
+                          <a href="https://shopee.co.id/Kursi-roda-3in1-sella-KY-609-GC-i.38148435.573472368" style="color: blue;">Informasi Peminjaman</a>
+                        </div>
+                      </div>
+                      <div class="col-md-18">
+                        <div class="service-box-v1">
+                          <div><i class="fa fa-blind" aria-hidden="true"></i></div>
+                          <h2>Tongkat</h2>
+                          <p>Jumlah Tongkat</p>
+                          <p>{{ tongkat.jumlah }}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row margin-bottom-20">
+                      <div class="col-md-18">
+                        <div class="service-box-v1">
+                          <div><i class="fa fa-headphones"></i></div>
+                          <h2>Alat Pendengaran</h2>
+                          <p>Jumlah Alat </p>
+                          <p>{{ alat_pendengaran.jumlah }}</p>
+                        </div>
+                      </div>
+                      <div class="col-md-18">
+                        <div class="service-box-v1">
+                          <div><i class="fa fa-stethoscope" aria-hidden="true"></i></i></div>
+                          <h2>Kaki Pasangan</h2>
+                          <p>Jumlah Alat</p>
+                          <p>{{ kaki_pasangan.jumlah }}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row margin-bottom-20">
+                      <div class="col-md-18">
+                        <div class="service-box-v1">
+                          <div><i class="fa fa-user-md" aria-hidden="true"></i></div>
+                          <h2>Kaca Mata</h2>
+                          <p>Jumlah Kaca Mata</p>
+                          <p>{{ kacamata.jumlah }}</p>
+                        </div>
+                      </div>
+                      <div class="col-md-18">
+                        <div class="service-box-v1">
+                          <div><i class="fa fa-book" aria-hidden="true"></i></div>
+                          <h2>Al-Quran Braile</h2>
+                          <p>Jumlah Alquran Braile</p>
+                          <p>{{ alquran.jumlah }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END SERVICE BLOCKS -->    
+                </div>
+           </div>
+         </div>
+        </div>
+       </div>
+   
+  {% include 'footer_user.html' %}

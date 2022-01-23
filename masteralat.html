@@ -1,0 +1,61 @@
+{% include 'header.html' %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800">Form Master Data Alat</h1>
+      <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+              class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+  </div>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <!-- <th>ID</th> -->
+                        <th>Nama Alat</th>
+                        <th>Jumlah</th>                        
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in row %}
+                    <tr>
+                        <!-- <td>{{data.id}}</td> -->
+                        <td>{{data.nama_alat}}</td>
+                        <td>{{data.jumlah}}</td>
+                        <td>
+                            <a href="/edit_alat/{{data.id}}" class="btn btn-warning btn-circle btn-sm">
+                            <i class="fas fa-edit"></i></a>  
+                            <!-- <a href="/delete_alat/{{data.id}}" class="btn btn-danger btn-circle btn-sm">
+                            <i class="fas fa-trash"></i></a> -->
+                            
+                         </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="my-1"></div>
+                <!-- <a href="/add_alat" class="btn btn-success btn-icon-split">
+                <span class="text">Tambah Data </span>
+            </a> -->
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+<!-- /.container-fluid -->
+
+
+
+      {% include 'footer.html' %}

@@ -1,0 +1,34 @@
+{% include 'header.html' %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Update Data donatur</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="/saveupdate-donatur/{{id}}" method="post">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Lengkap</label>
+                    <input type="text" name="nama" class="form-control"  placeholder="masukkan nama lengkap" value="{{ row.nama }}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Alamat</label>
+                    <input type="text" name="alamat" class="form-control"  placeholder="masukkan Alamat" value="{{ row.alamat }}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Jenis Bantuan</label>
+                    <input type="text" name="jenis" class="form-control"  placeholder="masukkan Jenis Bantuan" value="{{ row.jenis_bantuan }}">
+                </div>     
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+  {% include 'footer.html' %}

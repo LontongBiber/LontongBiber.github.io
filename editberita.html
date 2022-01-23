@@ -1,0 +1,56 @@
+{% include 'header.html' %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Update Data Berita</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="/saveupdate-berita/{{id}}" method="post">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Tanggal</label>
+                        <input type="date" name="tanggal" class="form-control"  placeholder="masukkan tanggal" value="{{ row.tanggal }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Judul</label>
+                        <input type="text" name="judul" class="form-control"  placeholder="masukkan judul" value="{{ row.judul }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">isi</label>                        
+                        {{ ckeditor.create('isi',value=row.isi) }}
+                        <!-- <input name="isi" class="form-control"  placeholder="masukkan Isi" value="{{ row.isi }}"> -->
+                        <!-- <input type="text" name="judul" class="form-control"  placeholder="masukkan judul"> -->
+                      
+                    </div>  
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Author</label>
+                        
+                    <select name="author" value="{{ row.author }}" class="form-control">
+                        <option value="MUHAMMAD AFIF">MUHAMMAD AFIF</option>
+                        <option value="MUHAMMAD RIDUWAN">MUHAMMAD RIDUWAN</option>
+                        <option value="MUHAMMAD RISKY">MUHAMMAD RISKY</option>
+                        <option value="MUHAMMAD DAVID M">MUHAMMAD DAVID M</option>
+                        <option value="MUCHAMAT DAVID A">MUCHAMAT DAVID A</option>
+                        <option value="VINA FAUZIA">VINA FAUZIA</option>
+                        <option value="DINDA DWI KRISMONICA">DINDA DWI KRISMONICA</option>
+                        <option value="ALLIZA SAPTO NOVARI">ALLIZA SAPTO NOVARI</option>
+                        <option value="AMANDA AYU RIZKYA">AMANDA AYU RIZKYA</option>
+                    </select>
+                    
+                      
+                    </div>
+                    
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+            {{ ckeditor.load() }}
+        </div>
+    </div>
+</div>
+  {% include 'footer.html' %}

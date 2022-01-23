@@ -1,0 +1,65 @@
+{% include 'header.html' %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Update Data Disabilitas</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="/saveupdate-disabilitas/{{id}}" method="post">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Lengkap</label>
+                    <input type="text" name="nama_lengkap" class="form-control"  placeholder="masukkan nama legkap" value="{{ row.nama }}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Tempat Tanggal Lahir</label>
+                    <input type="text" name="ttl" class="form-control"  placeholder="masukkan ttl" value="{{ row.ttl }}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Jenis penyandang</label>
+                    <select name="penyandang" id="" class="form-control">
+                        <option value="TUNA DAKSA">TUNA DAKSA</option>
+                        <option value="TUNA NETRA">TUNA NETRA</option>
+                        <option value="TUNA RUNGU">TUNA RUNGU</option>
+                        <option value="TUNA WICARA">TUNA WICARA</option>
+                        <option value="TUNA GANDA">TUNA GANDA</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Jenis Kelamin</label>
+                    <select name="jk" id="" class="form-control">
+                        {% if(row.jenis_kelamin=='L'): %}
+                        <option value="L" selected>L</option>
+                        <option value="P">P</option>
+                        {% elif(row.jenis_kelamin=='P'): %}
+                        <option value="L">L</option>
+                        <option value="P" selected>P</option>
+                        {% endif %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Usia</label>
+                    <input type="number" name="usia" class="form-control"  placeholder="masukkan usia" value="{{ row.usia }}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Alamat</label>
+                    <input type="text" name="alamat" class="form-control"  placeholder="masukkan alamat" value="{{ row.alamat }}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">status</label>
+                    <input type="text" name="status" class="form-control"  placeholder="masukkan status" value="{{ row.status }}">
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+  {% include 'footer.html' %}

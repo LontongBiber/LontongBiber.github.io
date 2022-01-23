@@ -1,0 +1,34 @@
+{% include 'header.html' %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Tambah Data Donatur</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="/save-donatur" method="post">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Lengkap</label>
+                    <input type="text" name="nama" class="form-control"  placeholder="masukkan nama legkap">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Alamat</label>
+                    <input type="text" name="alamat" class="form-control"  placeholder="masukkan Alamat">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Jenis bantuan</label>
+                    <input type="text" name="jenis" class="form-control"  placeholder="masukkan Jenis Bantuan">
+                </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+  {% include 'footer.html' %}

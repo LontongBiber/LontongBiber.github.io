@@ -1,0 +1,54 @@
+{% include 'header_user.html' %}
+<div class="main">
+    <div class="container">
+      <ul class="breadcrumb">
+          <li><a href="/">Beranda</a></li>
+          <li class="active">Tampil berita</li>
+      </ul>
+      <!-- BEGIN SIDEBAR & CONTENT -->
+      <div class="row margin-bottom-40">
+        <!-- BEGIN CONTENT -->
+        <div class="col-md-12 col-sm-12">
+          <h1>Halaman Tampil Berita</h1>
+          <div class="content-page">
+            <div class="row">
+                  <div class="col-md-8 col-sm-8">
+                    <h2>{{data.judul}}</h2>
+                    <ul class="blog-info">
+                      <li><i class=""></i> {{data.tanggal}}</li>
+                      <li>{{data.author}}</li>
+                    </ul>
+                    <div>
+                      {{data.isi | safe}}
+                    </div>
+                    <a href="/halamanberita" class="more">Kembali <i class="icon-angle-right"></i></a>
+                  </div>
+                </div>
+                
+                <hr class="blog-post-sep">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4">
+                </div>     
+                <hr class="blog-post-sep">
+                <ul class="pagination">
+                  <li><a href="javascript:;">Prev</a></li>
+                  <li><a href="javascript:;">1</a></li>
+                  <li><a href="javascript:;">2</a></li>
+                  <li class="active"><a href="javascript:;">3</a></li>
+                  <li><a href="javascript:;">4</a></li>
+                  <li><a href="javascript:;">5</a></li>
+                  <li><a href="javascript:;">Next</a></li>
+                </ul>               
+              </div>
+              <!-- END LEFT SIDEBAR -->            
+            </div>
+          </div>
+        </div>
+        <!-- END CONTENT -->
+      </div>
+      <!-- END SIDEBAR & CONTENT -->
+    </div>
+  </div>
+  </div>
+
+    {% include 'footer_user.html' %}
